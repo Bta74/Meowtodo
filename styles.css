@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+      padding: 0;
+        font-family: "Roboto", sans-serif;
+          background-color: white;
+          }
+
+          .App {
+            text-align: center;
+            }
+
+            header {
+              padding: 10px;
+                background: #f8f8f8;
+                  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+                    position: relative;
+                    }
+
+                    .app-title {
+                      font-size: 3rem;
+                        color: #c8a2c8;
+                        }
+
+                        .input-container {
+                          display: flex;
+                            gap: 10px;
+                              margin-top: 10px;
+                              }
+
+                              .input-container input {
+                                padding: 10px;
+                                  border: 1px solid #ddd;
+                                    border-radius: 5px;
+                                      font-size: 1rem;
+                                      }
+
+                                      .color-picker,
+                                      .date-time-picker {
+                                        display: flex;
+                                          align-items: center;
+                                          }
+
+                                          .color-picker input,
+                                          .date-time-picker input {
+                                            border: none;
+                                              background: none;
+                                                margin-left: 5px;
+                                                  cursor: pointer;
+                                                  }
+
+                                                  button {
+                                                    padding: 10px 20px;
+                                                      background-color: #c8a2c8;
+                                                        border: none;
+                                                          border-radius: 5px;
+                                                            color: white;
+                                                              font-size: 1rem;
+                                                                cursor: pointer;
+                                                                  transition: background-color 0.3s;
+                                                                  }
+
+                                                                  button:hover {
+                                                                    background-color: #a073a0;
+                                                                    }
+
+                                                                    .trash-icon {
+                                                                      position: absolute;
+                                                                        top: 15px;
+                                                                          right: 20px;
+                                                                            font-size: 2rem;
+                                                                              cursor: pointer;
+                                                                              }
+
+                                                                              .tasks {
+                                                                                display: flex;
+                                                                                  flex-wrap: wrap;
+                                                                                    justify-content: flex-end;
+                                                                                      margin-top: 20px;
+                                                                                      }
+
+                                                                                      .task {
+                                                                                        width: 200px;
+                                                                                          margin: 10px;
+                                                                                            padding: 15px;
+                                                                                              border-radius: 10px;
+                                                                                                position: relative;
+                                                                                                  background: #f4f4f4;
+                                                                                                    border: 1px solid #ccc;
+                                                                                                      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                                                      }
+
+                                                                                                      .task-title {
+                                                                                                        margin-bottom: 10px;
+                                                                                                          cursor: pointer;
+                                                                                                          }
+
+                                                                                                          .task.completed {
+                                                                                                            text-decoration: line-through;
+                                                                                                              opacity: 0.7;
+                                                                                                              }
+
+                                                                                                              .task-datetime {
+                                                                                                                margin-left: 10px;
+                                                                                                                  cursor: pointer;
+                                                                                                                    font-size: 1.2rem;
+                                                                                                                    }
+
+                                                                                                                    .toggle-subtasks {
+                                                                                                                      margin-top: 10px;
+                                                                                                                        background-color: #c8a2c8;
+                                                                                                                          color: white;
+                                                                                                                            border: none;
+                                                                                                                              border-radius: 5px;
+                                                                                                                                padding: 5px 10px;
+                                                                                                                                  cursor: pointer;
+                                                                                                                                  }
+
+                                                                                                                                  .toggle-subtasks:hover {
+                                                                                                                                    background-color: #a073a0;
+                                                                                                                                    }
+
+                                                                                                                                    .subtasks {
+                                                                                                                                      margin-top: 10px;
+                                                                                                                                        border-top: 1px solid #ddd;
+                                                                                                                                          padding-top: 10px;
+                                                                                                                                          }
+
+                                                                                                                                          .subtask {
+                                                                                                                                            padding: 5px;
+                                                                                                                                              margin: 5px 0;
+                                                                                                                                                cursor: pointer;
+                                                                                                                                                  background-color: #e6e6e6;
+                                                                                                                                                    border-radius: 5px;
+                                                                                                                                                    }
+
+                                                                                                                                                    .subtask.completed {
+                                                                                                                                                      text-decoration: line-through;
+                                                                                                                                                        opacity: 0.7;
+                                                                                                                                                        }
+
+                                                                                                                                                        .trash-bin {
+                                                                                                                                                          margin-top: 20px;
+                                                                                                                                                            padding: 10px;
+                                                                                                                                                            }
+
+                                                                                                                                                            .deleted-task {
+                                                                                                                                                              padding: 15px;
+                                                                                                                                                                margin: 10px 0;
+                                                                                                                                                                  border: 1px solid #ddd;
+                                                                                                                                                                    border-radius: 10px;
+                                                                                                                                                                      background-color: #f8d7da;
+                                                                                                                                                                        display: flex;
+                                                                                                                                                                          justify-content: space-between;
+                                                                                                                                                                            align-items: center;
+                                                                                                                                                                            }
+
+                                                                                                                                                                            .empty-trash {
+                                                                                                                                                                              margin-top: 10px;
+                                                                                                                                                                                padding: 10px 20px;
+                                                                                                                                                                                  background-color: #d9534f;
+                                                                                                                                                                                    border: none;
+                                                                                                                                                                                      border-radius: 5px;
+                                                                                                                                                                                        color: white;
+                                                                                                                                                                                          cursor: pointer;
+                                                                                                                                                                                          }
+
+                                                                                                                                                                                          .empty-trash:hover {
+                                                                                                                                                                                            background-color: #c9302c;
+                                                                                                                                                                                            }
+
+                                                                                                                                                                                            .trash-empty {
+                                                                                                                                                                                              color: gray;
+                                                                                                                                                                                                font-style: italic;
+                                                                                                                                                                                                }
+                                                                                                                                                                                                
+}
